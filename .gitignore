@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Secrets and local runtime state
+.env
+.env.*
+!.env.example
+views/src/main/resources/config.properties
+
+# Build output
+apptcc/dist/
+api/build/
+api/build.zip
+views/target/
+views/out/
+views/*.jar
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
