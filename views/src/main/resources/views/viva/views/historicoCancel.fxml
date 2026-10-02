@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.viva.views.Entidades.Operacoes.Controller.historicoCancelamentoController">
+   <children>
+      <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="769.0" prefWidth="1059.0">
+                     <children>
+                  <TableView fx:id="tblMarca" layoutX="-53.0" layoutY="144.0" prefHeight="400.0" prefWidth="1166.0" styleClass="tblDados" stylesheets="@../../../style.css">
+                     <columns>
+                        <TableColumn fx:id="columnVendedor" prefWidth="250.0" text="Marca" />
+                        <TableColumn fx:id="columntipoVendedor" prefWidth="300.0" text="Tipo de Operação" />
+                        <TableColumn fx:id="columnDataVendedor" prefWidth="300.0" text="Data da Operação" />
+                        <TableColumn fx:id="columnResponsavelVendedor" minWidth="0.0" prefWidth="300.0" text="Responsável" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="tblEvento" layoutX="-53.0" layoutY="144.0" prefHeight="400.0" prefWidth="1166.0" styleClass="tblDados" stylesheets="@../../../style.css" visible="false">
+                    <columns>
+                      <TableColumn fx:id="columnEvento" prefWidth="250.0" text="Evento" />
+                      <TableColumn fx:id="columnTipoEvento" prefWidth="300.0" text="Tipo de Operação" />
+                        <TableColumn fx:id="columnDataEvento" prefWidth="300.0" text="Data da Operação" />
+                        <TableColumn fx:id="columnResponsavelEvento" minWidth="0.0" prefWidth="300.0" text="Responsável" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tblEmpresa" layoutX="-53.0" layoutY="144.0" prefHeight="400.0" prefWidth="1166.0" styleClass="tblDados" stylesheets="@../../../style.css" visible="false">
+                     <columns>
+                        <TableColumn fx:id="columnVendEvento" prefWidth="250.0" text="Empresa" />
+                        <TableColumn fx:id="columnTipoVendEvento" prefWidth="300.0" text="Tipo de Operação" />
+                        <TableColumn fx:id="columnDataVendEvento" prefWidth="300.0" text="Data da Operação" />
+                        <TableColumn fx:id="columnResponsavelVendEvento" minWidth="0.0" prefWidth="300.0" text="Responsável" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnMarca" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#btnMarcaClicked" onMouseEntered="#btnMarcaEntered" onMouseExited="#btnMarcaExited" prefHeight="27.0" prefWidth="125.0" styleClass="btnEscolha" stylesheets="@../../../style.css" text="Marca">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEmpresa" layoutX="316.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#btnEmpresaClicked" onMouseEntered="#btnEmpresaEntered" onMouseExited="#btnEmpresaExited" prefHeight="27.0" prefWidth="125.0" styleClass="btnEscolha" stylesheets="@../../../style.css" text="Empresa">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEvento" layoutX="158.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#btnEventoClicked" onMouseEntered="#btnEventoEntered" onMouseExited="#btnEventoExited" prefHeight="27.0" prefWidth="125.0" styleClass="btnEscolha" stylesheets="@../../../style.css" text="Evento">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                        <Button fx:id="btnBuscar" layoutX="988.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#btnBuscarCliked" onMouseEntered="#btnBuscarEntered" onMouseExited="#btnBuscarExited" prefHeight="27.0" prefWidth="125.0" styleClass="btnClick" stylesheets="@../../../style.css" text="Buscar" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="20.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtBusca" layoutX="683.0" layoutY="97.0" prefHeight="30.0" prefWidth="280.0" promptText="Busque o cancelamento aqui"/>
+                  </children>
+                  </Pane>
+                  <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../style.css" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane fx:id="paneSideCancel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#paneSideCancelClicked" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
+      <Pane fx:id="paneSidePagamento" onMouseExited="#paneSidePagamentoExited" prefHeight="101.0" prefWidth="251.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideNovaTran" layoutY="50.0" onMouseClicked="#btnSideNovaTranClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Nova transação">
+               <graphic>
+                  <ImageView fx:id="imgPagamento1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCaixa" onMouseClicked="#btnSideCaixaClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Histórico de caixa">
+               <graphic>
+                  <ImageView fx:id="imgCadastro1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSideCadastro" onMouseExited="#paneSideCadastroExited" prefHeight="250.0" prefWidth="370.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="-100.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideCadLojas" onMouseClicked="#btnSideCadLojasClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro lojas">
+               <graphic>
+                  <ImageView fx:id="imgPagamento11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCadEven" layoutY="50.0" onMouseClicked="#btnSideCadEvenClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro eventos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLojasCad" layoutY="100.0" onMouseClicked="#btnSideLojasCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Lojas cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro111" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideEvenCad" layoutY="150.0" onMouseClicked="#btnSideEvenCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Eventos cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro112" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCancel" layoutY="200.0" onMouseClicked="#btnSideCancelClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Historico de cancelamentos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro113" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSidebar" prefHeight="703.0" prefWidth="225.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSidePag" onMouseEntered="#btnSidePagEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Pagamento">
+               <graphic>
+                  <ImageView fx:id="imgPagamento" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCad" layoutY="50.0" onMouseEntered="#btnSideCadEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro">
+               <graphic>
+                  <ImageView fx:id="imgCadastro" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideRelatorios" layoutY="100.0" onMouseClicked="#btnSideRelatoriosClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Relatórios">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/image-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLogout" layoutY="150.0" onMouseClicked="#btnSideLogoutClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Logout">
+               <graphic>
+                  <ImageView fx:id="imgSair1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/log-out-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" styleClass="paneCabecalho" stylesheets="@../../../style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="panePrincipal" prefHeight="65.0" prefWidth="1366.0" styleClass="paneCabecalho" stylesheets="@../../../style.css" HBox.hgrow="NEVER">
+               <children>
+                  <Pane layoutX="436.0" layoutY="6.0" prefHeight="53.0" prefWidth="495.0">
+                     <children>
+                        <Label fx:id="lblCabecalho" layoutX="53.0" layoutY="4.0" prefHeight="48.0" prefWidth="450.0" styleClass="lblCabecalho" stylesheets="@../../../style.css" text="Histórico de cancelamento" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgLogo" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/VivaSetas.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <ImageView fx:id="btnOptions" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#btnOptionsClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/menu-regular-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFechar" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#imgFecharClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/x-regular-24 (1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="achorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.viva.views.Entidades.Transacao.Controllers.novaTransacaoController">
+   <children>
+      <HBox alignment="CENTER" layoutX="190.0" layoutY="179.0" styleClass="paneFundo" stylesheets="@../../../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="769.0" prefWidth="1059.0" HBox.hgrow="NEVER">
+               <children>
+                  <Pane fx:id="paneSaldo" layoutX="433.0" layoutY="240.0" prefHeight="153.0" prefWidth="590.0" visible="false">
+                     <children>
+                        <TextField fx:id="txtValorSaldo" editable="false" layoutX="367.0" layoutY="71.0" onKeyReleased="#txtValorSaldoReleased" prefHeight="41.0" prefWidth="179.0" promptText="R$00,00" styleClass="txt" stylesheets="@../../../style.css">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fx:id="imgValorSaldo" fitHeight="40.0" fitWidth="40.0" layoutX="367.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bx-money.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblValorSaldo" layoutX="414.0" layoutY="21.0" minHeight="25.0" prefWidth="100.0" styleClass="lbl" stylesheets="@../../../style.css" text="Saldo">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgCodigoSaldo" fitHeight="39.0" fitWidth="40.0" layoutX="85.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bx-qr-scan.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtVoucherSaldo" layoutX="85.0" layoutY="71.0" prefHeight="53.0" prefWidth="192.0" promptText="Insira o código" styleClass="txt" stylesheets="@../../../style.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="lblVoucherSaldo" layoutX="130.0" layoutY="18.0" styleClass="lbl" stylesheets="@../../../style.css" text="Código">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneEstorno" layoutX="610.0" layoutY="280.0" prefHeight="147.0" prefWidth="304.0" visible="false">
+                     <children>
+                        <TextField fx:id="txtVoucherEstorno" layoutX="56.0" layoutY="71.0" prefHeight="53.0" prefWidth="192.0" promptText="Insira o código" styleClass="txt" stylesheets="@../../../style.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fx:id="imgVoucherEstorno" fitHeight="39.0" fitWidth="40.0" layoutX="72.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bx-qr-scan.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblVoucherEstorno" layoutX="117.0" layoutY="14.0" styleClass="lbl" stylesheets="@../../../style.css" text="Código">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneDeposito" layoutX="433.0" layoutY="280.0" prefHeight="153.0" prefWidth="590.0">
+                     <children>
+                        <TextField fx:id="txtValorDeposito" layoutX="367.0" layoutY="71.0" onKeyReleased="#txtValorDepositoKReleased" prefHeight="41.0" prefWidth="179.0" promptText="R$00,00" styleClass="txt" stylesheets="@../../../style.css">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fx:id="imgValorDeposito" fitHeight="40.0" fitWidth="40.0" layoutX="367.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bx-money.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblValorDeposito" layoutX="414.0" layoutY="21.0" minHeight="25.0" prefWidth="100.0" styleClass="lbl" stylesheets="@../../../style.css" text="Valor">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgCodigoDeposito" fitHeight="39.0" fitWidth="40.0" layoutX="85.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bx-qr-scan.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtVoucherDeposito" layoutX="85.0" layoutY="71.0" prefHeight="53.0" prefWidth="192.0" promptText="Insira o código" styleClass="txt" stylesheets="@../../../style.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="lblVoucherDeposito" layoutX="130.0" layoutY="18.0" styleClass="lbl" stylesheets="@../../../style.css" text="Código">
+                           <font>
+                              <Font name="Arial" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <VBox alignment="CENTER" layoutX="53.0" layoutY="121.0">
+                     <children>
+                        <ImageView fx:id="imgUsuario" fitHeight="357.0" fitWidth="366.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblUsuario" styleClass="lblMaior" stylesheets="@../../../style.css" text="Olá, Jovita!" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnEfetivar" layoutX="622.0" layoutY="493.0" mnemonicParsing="false" onMouseClicked="#btnEfetivarClicked" prefHeight="55.0" prefWidth="275.0" styleClass="btnClick" stylesheets="@../../../style.css" text="Efetivar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDeposito" layoutX="534.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#btnDepositoClicked" onMouseEntered="#btnDepositoEntered" onMouseExited="#btnDepositoExited" prefHeight="38.0" prefWidth="138.0" styleClass="btnEscolha" stylesheets="@../../../style.css" text="Depósito">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEstorno" layoutX="704.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#btnEstornoClicked" onMouseEntered="#btnEstornoEntered" onMouseExited="#btnEstornoExited" prefHeight="27.0" prefWidth="125.0" stylesheets="@../../../style.css" text="Estorno">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnEscolha2" />
+                        <String fx:value="btnEscolha" />
+                     </styleClass>
+                  </Button>
+                  <ComboBox fx:id="cbmEvento" layoutX="521.0" layoutY="208.0" prefHeight="36.0" prefWidth="193.0" />
+                  <Label fx:id="lblEvento" layoutX="521.0" layoutY="182.0" styleClass="lblSelecaoEvento" stylesheets="@../../../style.css" text="Evento:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbmMetodo" layoutX="804.0" layoutY="208.0" prefHeight="36.0" prefWidth="193.0" />
+                  <Label fx:id="lblMetodo" layoutX="804.0" layoutY="187.0" text="Forma de Pagamento:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnConsultaSaldo" layoutX="861.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#btnConsultaSaldoClicked" onMouseEntered="#btnConsultaSaldoEntered" onMouseExited="#btnConsultaSaldoExited" prefHeight="27.0" prefWidth="125.0" stylesheets="@../../../style.css" text="Saldo">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnEscolha2" />
+                        <String fx:value="btnEscolha" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane fx:id="paneSideCancel" onMouseClicked="#paneSideCancelClicked" prefHeight="791.0" prefWidth="1366.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="paneSidePagamento" onMouseExited="#paneSidePagamentoExited" prefHeight="101.0" prefWidth="251.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideNovaTran" layoutY="50.0" onMouseClicked="#btnSideNovaTranClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Nova transação">
+               <graphic>
+                  <ImageView fx:id="imgPagamento1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCaixa" onMouseClicked="#btnSideCaixaClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Histórico de caixa">
+               <graphic>
+                  <ImageView fx:id="imgCadastro1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSideCadastro" onMouseExited="#paneSideCadastroExited" prefHeight="250.0" prefWidth="370.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="-100.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideCadLojas" onMouseClicked="#btnSideCadLojasClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro lojas">
+               <graphic>
+                  <ImageView fx:id="imgPagamento11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCadEven" layoutY="50.0" onMouseClicked="#btnSideCadEvenClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro eventos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLojasCad" layoutY="100.0" onMouseClicked="#btnSideLojasCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Lojas cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro111" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideEvenCad" layoutY="150.0" onMouseClicked="#btnSideEvenCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Eventos cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro112" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCancel" layoutY="200.0" onMouseClicked="#btnSideCancelClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Historico de cancelamentos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro113" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSidebar" prefHeight="768.0" prefWidth="225.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSidePag" onMouseEntered="#btnSidePagEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Pagamento">
+               <graphic>
+                  <ImageView fx:id="imgPagamento" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCad" layoutY="50.0" onMouseEntered="#btnSideCadEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro">
+               <graphic>
+                  <ImageView fx:id="imgCadastro" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideRelatorios" layoutY="100.0" onMouseClicked="#btnSideRelatoriosClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Relatórios">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/image-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLogout" layoutY="150.0" onMouseClicked="#btnSideLogoutClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Logout">
+               <graphic>
+                  <ImageView fx:id="imgSair" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/log-out-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" styleClass="paneCabecalho" stylesheets="@../../../style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="panePrincipal" prefHeight="65.0" prefWidth="1366.0" styleClass="paneCabecalho" stylesheets="@../../../style.css">
+               <children>
+                  <Pane layoutX="566.0" layoutY="6.0" prefHeight="53.0" prefWidth="235.0">
+                     <children>
+                        <Label fx:id="lblCabecalho" layoutX="53.0" layoutY="4.0" prefHeight="45.0" prefWidth="179.0" styleClass="lblCabecalho" stylesheets="@../../../style.css" text="Transação" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgLogo" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/VivaSetas.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <ImageView fx:id="btnOptions" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#btnOptionsClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/menu-regular-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFechar" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#imgFecharClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/x-regular-24 (1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

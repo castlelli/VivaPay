@@ -1,0 +1,234 @@
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+/*botões*/
+.btnSair{
+
+ transition: transform 0.3s ease; /* Suaviza a transição */
+    -fx-fit-width: 100px; /* Largura padrão da imagem */
+    -fx-fit-height: 100px;
+}
+
+
+.btnClick{
+    -fx-font-family: 'verdana' !important; /*noto sans, verdana*/
+    -fx-background-radius: 30px;
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold; /* Adiciona negrito */
+
+}
+.btnClick:hover {
+    -fx-background-color: linear-gradient(to bottom right,#00ABEF,#0C6284);
+}
+
+.btnRedirect{
+    -fx-font-family: 'verdana' !important;
+    -fx-background-radius: 30px;
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.btnRedirect:hover {
+    -fx-background-color: linear-gradient(to bottom right,#00ABEF,#0C6284);/*#008bc2;*/ /* cor de fundo ao passar o mouse */
+}
+.btnEscolha{
+    -fx-font-size: 20px;
+    -fx-background-radius: 30px;
+    -fx-background-color: black;
+    -fx-text-fill:  white;
+    -fx-font-family: 'verdana' !important;
+    -fx-font-weight: bold;
+    }
+
+    /********/
+.paneFundo{
+    -fx-background-color: #ffffff;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#ffffff;
+}
+.close:hover{
+    -fx-background-color:red;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#ffffff;
+}
+.minimize:hover{
+   /* -fx-background-color:#ddd;*/
+}
+
+.paneOpcoes{
+    -fx-background-radius: 50px;
+    -fx-background-color: #f5f5f5;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+    -fx-border-color: #c3c3c3;
+    -fx-border-collapse: collapse;
+}
+
+.paneCabecalho{
+    -fx-background-color: black;
+}
+
+.paneCabecalho img{
+    margin: 10px 5px 10px 5px;
+}
+.lblSelecaoEvento{
+    -fx-font: 18px imprima;
+    -fx-text-fill:#111111;
+}
+
+.lblCabecalho{
+    -fx-font-size: 30px;
+    -fx-font-family: arial;
+    -fx-text-fill:#ffffff;
+    -fx-font: 3em imprima;
+}
+
+.lblNavBar{
+    -fx-background-color: transparent;
+    -fx-font: 1em imprima;
+    -fx-text-fill: white;
+}
+.paneSideBar{
+    -fx-background-color: black;
+    -fx-border-color:black;
+    -fx-border-width: 0 2 0 0;
+}
+.btnSidebar{
+    -fx-background-color: transparent;
+    -fx-border-color: #666666;
+    -fx-border-width: 1px;
+    -fx-font: 2em imprima;
+    -fx-text-fill: white;
+
+
+}
+
+
+.tblDados{
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-collapse: collapse;
+    -fx-font: 20px imprima;
+}
+
+.lbl{
+    -fx-font: 3em imprima;
+    -fx-text-fill:#111111;
+}
+
+.lblMaior{
+    -fx-font: 5em imprima;
+    -fx-text-fill:#111111;
+}
+
+
+.hyperlink{
+    -fx-background-color: #ffffff;
+    -fx-text-fill:#111111;
+    -fx-font: 1.2em imprima;
+
+}
+
+.txtescolha{
+    -fx-font: 24px imprima;
+}
+
+.txt{
+    -fx-border-color: black;
+    -fx-font: 24px imprima;
+    
+}
+
+
+.choiceBox{
+    -fx-background-color: #ffffff;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-font: 2em imprima;
+}
+
+.paneCabecalho{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-style:normal;
+}
+.lblTitulo{
+    -fx-font-size: 40px;
+    -fx-font-family: arial;
+    -fx-width: 540px;
+    -fx-color: white;
+}
+/*q botao eh esse?*/
+.bntLoja{
+    -fx-background-radius: 30px;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.tblDados{
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-collapse: collapse;
+    
+}
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#ffffff;
+}
+.close:hover{
+    -fx-background-color:red;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#ffffff;
+}
+.minimize:hover{
+    -fx-background-color:#ddd;
+}

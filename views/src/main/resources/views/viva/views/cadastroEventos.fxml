@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.viva.views.Entidades.Evento.Controllers.cadastroEventosController">
+   <children>
+      <HBox alignment="CENTER" styleClass="paneFundo" stylesheets="@../../../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Pane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="768.0" prefWidth="1059.0" HBox.hgrow="NEVER">
+               <children>
+                  <VBox alignment="CENTER" layoutY="114.0">
+                     <children>
+                        <ImageView fx:id="imgUsuario" fitHeight="353.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblUsuario" prefHeight="76.0" styleClass="lblMaior" stylesheets="@../../../style.css" text="Olá, Cabello!">
+                           <font>
+                              <Font name="Arial Narrow" size="49.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="txtNome" layoutX="475.0" layoutY="194.0" prefHeight="47.0" prefWidth="256.0" promptText="Digite o Nome" styleClass="txt" stylesheets="@../../../style.css" />
+                  <Button fx:id="btnCadastrar" layoutX="643.0" layoutY="535.0" mnemonicParsing="false" onMouseClicked="#btnCadastrarClicked" prefHeight="55.0" prefWidth="275.0" styleClass="btnClick" stylesheets="@../../../style.css" text="Cadastrar">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblNome" layoutX="443.0" layoutY="137.0" styleClass="lbl" stylesheets="@../../../style.css" text="Nome do Evento">
+                     <font>
+                        <Font name="Arial Narrow" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iconNome" fitHeight="30.0" fitWidth="60.0" layoutX="441.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/pencil-solid-24.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtAbreviacao" layoutX="475.0" layoutY="444.0" prefHeight="47.0" prefWidth="256.0" promptText="Digite a abreviação" styleClass="txt" stylesheets="@../../../style.css" />
+                  <Label fx:id="lblInicio" layoutX="835.0" layoutY="137.0" styleClass="lbl" stylesheets="@../../../style.css" text=" Início">
+                     <font>
+                        <Font name="Arial Narrow" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDescricao" layoutX="475.0" layoutY="317.0" prefHeight="47.0" prefWidth="256.0" promptText="Descreva brevemente" styleClass="txt" stylesheets="@../../../style.css">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblAbreviacao" layoutX="441.0" layoutY="385.0" styleClass="lbl" stylesheets="@../../../style.css" text="Abreviação">
+                     <font>
+                        <Font name="Arial Narrow" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDescricao" layoutX="441.0" layoutY="266.0" styleClass="lbl" stylesheets="@../../../style.css" text="Descrição">
+                     <font>
+                        <Font name="Arial Narrow" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTermino" layoutX="835.0" layoutY="326.0" styleClass="lbl" stylesheets="@../../../style.css" text="Término">
+                     <font>
+                        <Font name="Arial Narrow" size="24.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dtpInicio" layoutX="876.0" layoutY="198.0" prefHeight="41.0" prefWidth="256.0" styleClass="choiceBox" stylesheets="@../../../style.css" />
+                  <DatePicker fx:id="dtpTermino" layoutX="876.0" layoutY="381.0" prefHeight="44.0" prefWidth="256.0" styleClass="choiceBox" stylesheets="@../../../style.css" />
+                  <ImageView fx:id="iconAbreviacao" fitHeight="30.0" fitWidth="60.0" layoutX="441.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/pencil-solid-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconDescricao" fitHeight="30.0" fitWidth="60.0" layoutX="441.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/pencil-solid-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconInicio" fitHeight="30.0" fitWidth="60.0" layoutX="834.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/calendar-solid-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconTermino" fitHeight="30.0" fitWidth="60.0" layoutX="834.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/calendar-solid-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconInicio1" fitHeight="30.0" fitWidth="60.0" layoutX="834.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/bx-time.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconInicio11" fitHeight="30.0" fitWidth="60.0" layoutX="834.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                     <image>
+                        <Image url="@../../../imagens/bx-time.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtHoraInicio" layoutX="876.0" layoutY="261.0" prefHeight="47.0" prefWidth="256.0" promptText="hh:mm" styleClass="txt" stylesheets="@../../../style.css">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtHoraFim" layoutX="876.0" layoutY="441.0" prefHeight="47.0" prefWidth="256.0" promptText="hh:mm" styleClass="txt" stylesheets="@../../../style.css">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane fx:id="paneSideCancel" layoutX="10.0" layoutY="10.0" onMouseClicked="#paneSideCancelClicked" prefHeight="791.0" prefWidth="1366.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="paneSidePagamento" onMouseExited="#paneSidePagamentoExited" prefHeight="101.0" prefWidth="251.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideNovaTran" layoutY="50.0" onMouseClicked="#btnSideNovaTranClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Nova transação">
+               <graphic>
+                  <ImageView fx:id="imgPagamento1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCaixa" onMouseClicked="#btnSideCaixaClicked" prefHeight="50.0" prefWidth="251.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Histórico de caixa">
+               <graphic>
+                  <ImageView fx:id="imgCadastro1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSideCadastro" onMouseExited="#paneSideCadastroExited" prefHeight="250.0" prefWidth="370.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.leftAnchor="-100.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSideCadLojas" onMouseClicked="#btnSideCadLojasClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro lojas">
+               <graphic>
+                  <ImageView fx:id="imgPagamento11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCadEven" layoutY="50.0" onMouseClicked="#btnSideCadEvenClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro eventos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLojasCad" layoutY="100.0" onMouseClicked="#btnSideLojasCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Lojas cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro111" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideEvenCad" layoutY="150.0" onMouseClicked="#btnSideEvenCadClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Eventos cadastradas">
+               <graphic>
+                  <ImageView fx:id="imgCadastro112" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCancel" layoutY="200.0" onMouseClicked="#btnSideCancelClicked" prefHeight="50.0" prefWidth="370.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Historico de cancelamentos">
+               <graphic>
+                  <ImageView fx:id="imgCadastro113" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSidebar" prefHeight="703.0" prefWidth="225.0" styleClass="paneSideBar" stylesheets="@../../../style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label fx:id="btnSidePag" onMouseEntered="#btnSidePagEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Pagamento">
+               <graphic>
+                  <ImageView fx:id="imgPagamento" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/money-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideCad" layoutY="50.0" onMouseEntered="#btnSideCadEntered" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Cadastro">
+               <graphic>
+                  <ImageView fx:id="imgCadastro" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit-solid-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideRelatorios" layoutY="100.0" onMouseClicked="#btnSideRelatoriosClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Relatórios">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/image-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="btnSideLogout" layoutY="150.0" onMouseClicked="#btnSideLogoutClicked" prefHeight="50.0" prefWidth="225.0" styleClass="btnSidebar" stylesheets="@../../../style.css" text="Logout">
+               <graphic>
+                  <ImageView fx:id="imgSair1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/log-out-regular-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" styleClass="paneCabecalho" stylesheets="@../../../style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="panePrincipal1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="1366.0" styleClass="paneCabecalho" stylesheets="@../../../style.css" HBox.hgrow="NEVER">
+               <children>
+                  <Pane layoutX="480.0" layoutY="6.0" prefHeight="53.0" prefWidth="407.0">
+                     <children>
+                        <Label fx:id="lblCabecalho" layoutX="53.0" layoutY="4.0" prefHeight="48.0" prefWidth="356.0" styleClass="lblCabecalho" stylesheets="@../../../style.css" text="Cadastro de eventos" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgLogo" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/VivaSetas.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <ImageView fx:id="btnOptions" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#btnOptionsClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/menu-regular-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgFechar" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#imgFecharClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../imagens/x-regular-24 (1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

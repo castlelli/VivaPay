@@ -1,0 +1,13 @@
+{
+  "name": "Viva",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://186.217.113.14:3333"
+    }
+  ]
+}

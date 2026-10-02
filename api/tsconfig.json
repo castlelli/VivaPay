@@ -1,0 +1,12 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "rootDir": "./",
+    "outDir": "./build",
+    "types": ["node", "@types/adonisjs", "@adonisjs/mail"],
+    "paths": {
+      "@config/*": ["./config/*"],
+    }
+  }
+}

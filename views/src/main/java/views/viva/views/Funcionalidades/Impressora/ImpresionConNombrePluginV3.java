@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package views.viva.views.Funcionalidades.Impressora;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author parzibyte
+ */
+public class ImpresionConNombrePluginV3 {
+
+    public ArrayList<OperacionPluginV3> operaciones;
+    public String nombreImpresora;
+    public String serial;
+
+    public ImpresionConNombrePluginV3(ArrayList<OperacionPluginV3> operaciones, String nombreImpresora, String serial) {
+        this.operaciones = operaciones;
+        this.nombreImpresora = nombreImpresora;
+        this.serial = serial;
+    }
+
+
+}
